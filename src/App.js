@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import BookMarks from './components/BookMarks';
+import GfgWeekly from './components/GfgWeekly';
+import GitHub from './components/GitHub';
+import GoogleNews from './components/GoogleNews';
+import LeetCodeMonth from './components/LeetCodeMonth';
+import Social from './components/Social';
+import Todo from './components/Todo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="body-container">
+      
+      <Todo/>
+      <Social/>
+      <GfgWeekly/>
+      <LeetCodeMonth/>
+      <GitHub/>
+      <BookMarks/>
+      <GoogleNews/>
+
     </div>
   );
 }
