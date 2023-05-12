@@ -21,6 +21,11 @@
 }
 */
 
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&dis play=swap");
 body {
   box-sizing: border-box;
@@ -574,15 +579,19 @@ a:active {
   grid-area: gnews;
   background: #e8edf7;
   overflow: scroll;
+  height: 600px;
 }
 
 .news-container {
   display: grid;
+
+  
   margin-top: 15px;
 }
 
 .news-item {
   display: flex;
+  justify-content: space-between;
   background: #ffffff;
   border-radius: 13px;
   padding: 17px 24px;
@@ -592,15 +601,23 @@ a:active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: "Poppins";
+  font-style: normal;
+  width: 70%;
 }
 
 .news-headline h3 {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
+  
+  font-weight: 600;
+  font-size: 20px;
   line-height: 27px;
+  color: #292b30;
+}
 
+.news-headline p {
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 27px;
   color: #292b30;
 }
 
@@ -628,4 +645,18 @@ a:active {
 .news-thumbnail {
   width: 225px;
   height: 139px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.news-thumbnail img{
+  width: 200px;
+  height: 120px;
+  position: absolute;
+  right: 10px;
+  border: none;
+  border-radius: 10px;
+
 }

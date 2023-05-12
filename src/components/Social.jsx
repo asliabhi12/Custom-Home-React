@@ -1,4 +1,5 @@
 import React from 'react'
+import {Spotify} from 'react-spotify-embed'
 
 const Social = () => {
   return (
@@ -24,7 +25,7 @@ const Social = () => {
             <i class="fa-brands fa-add"></i>
           </div>
         </div>
-        <div class="social-container" id="spotify">spotify</div>
+        <Spotify link="https://open.spotify.com/track/5ihDGnhQgMA0F0tk9fNLlA?si=4472348a63dd4f83" class="social-container" id="spotify"/>
       </div>
   )
 }
