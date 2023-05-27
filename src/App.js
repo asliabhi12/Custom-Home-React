@@ -7,11 +7,6 @@ import LeetCodeMonth from './components/LeetCodeMonth';
 import Social from './components/Social';
 import Todo from './components/Todo';
 
-import Draggable from 'react-draggable';
-import GridLayout from 'react-grid-layout';
-
-const hello = "hello"
-
 function App() {
   return (
     <div class="body-container">

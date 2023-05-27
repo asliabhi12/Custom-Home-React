@@ -1,7 +1,14 @@
 import React from 'react'
-import {Spotify} from 'react-spotify-embed'
+import SpotifyPlayer from 'react-spotify-player';
 
 const Social = () => {
+  const size = {
+    width: '100%',
+    height: 360,
+  };
+  const view = 'list'; // or 'coverart'
+  const theme = 'white'; // or 'white'
+
   return (
     <div class="ele-container" id="ele-2">
         <div class="social-container" id="twitter">
@@ -25,7 +32,12 @@ const Social = () => {
             <i class="fa-brands fa-add"></i>
           </div>
         </div>
-        <Spotify link="https://open.spotify.com/track/5ihDGnhQgMA0F0tk9fNLlA?si=4472348a63dd4f83" class="social-container" id="spotify"/>
+        <div class="social-container" id="spotify">
+        <SpotifyPlayer uri="spotify:album:1TIUsv8qmYLpBEhvmBmyBk"
+  size={size}
+
+  theme={theme} />
+        </div>
       </div>
   )
 }
