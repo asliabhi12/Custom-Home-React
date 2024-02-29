@@ -105,7 +105,6 @@ I am playing with CSS
 }
 
 #todo-nav {
-  border-bottom: 0.5px solid rgba(41, 43, 48, 0.1);
   position: sticky;
   top: 0;
   background: #faf9f0;
@@ -140,12 +139,24 @@ I am playing with CSS
   border-radius: 50%;
 }
 
+.delete-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .ele-container nav h2 {
   display: flex;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
 }
+
+.to-do-container{
+  margin-top: 15px;
+  height: 200px;
+  overflow: scroll;
+}
+
 
 .to-do-container span {
   position: absolute;
@@ -155,10 +166,60 @@ I am playing with CSS
   z-index: 0;
 }
 
+
+.single-todo-container{
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+input[type=checkbox] {
+  position: relative;
+	border: 2px solid #292B30;
+	border-radius: 5px;
+	background: none;
+	cursor: pointer;
+	line-height: 0;
+	margin: 0 .6em 0 0;
+	outline: 0;
+	padding: 0 !important;
+	vertical-align: text-top;
+	height: 20px;
+	width: 20px;
+	-webkit-appearance: none;
+  opacity: .5;
+}
+
+input[type=checkbox]:hover {
+  opacity: 1;
+}
+
+input[type=checkbox]:checked {
+  background-color: #292B30;
+  opacity: 1;
+}
+
+input[type=checkbox]:before {
+  content: '';
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 4px;
+  height: 10px;
+  border: solid #FFF;
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+}
+
+
 #three-dot {
   background: transparent;
   border: none;
-
   padding: 0px;
   font-size: 20px;
   font-weight: bold;
@@ -171,15 +232,11 @@ I am playing with CSS
 }
 
 #ele-1 label {
-  margin-top: -20px;
   font-family: "Poppins", arial;
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
-  display: grid;
-  grid-template-columns: 1em auto;
-  gap: 0.5em;
-  line-height: 10px;
+
 }
 
 .checked {
