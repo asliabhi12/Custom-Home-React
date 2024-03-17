@@ -30,7 +30,7 @@ body {
 }
 
 .body-container {
-  padding: 60px;
+  padding: 214px 120px 50px 120px;
   display: grid;
   grid-gap: 25px;
   grid-template-columns: 1fr;
@@ -79,11 +79,13 @@ body {
 }
 
 .ele-container {
+  max-width:750px;
   padding: 15px;
   font-size: 40px;
   border-radius: 15px;
   font-family: "Poppins", arial;
   font-style: normal;
+
 }
 
 .ele-container nav {
@@ -99,9 +101,10 @@ I am playing with CSS
   grid-area: todo;
   border: none;
   background: #faf9f0;
-  overflow: scroll;
+  overflow-y: scroll;
   position: relative;
   padding-top: 0px;
+  max-height: 300px;
 }
 
 #todo-nav {
@@ -169,7 +172,7 @@ I am playing with CSS
 
 .single-todo-container{
   display: flex;
-  padding-top: 20px;
+  margin-bottom: 12px;
   align-items: center;
   justify-content: space-between;
 }
@@ -252,6 +255,7 @@ input[type=checkbox]:before {
   grid-column-gap: 23px;
   grid-row-gap: 23px;
   background: #f0f3fa;
+  max-height: 300px;
 }
 
 .social-container {
@@ -262,6 +266,7 @@ input[type=checkbox]:before {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  max-height: 120px;
 }
 
 #twitter {
@@ -321,6 +326,7 @@ a:active {
   grid-area: spotify;
   background: #9fdfa6;
   height: 100%;
+  max-height: 280px;
 }
 
 #ele-3 {
@@ -630,19 +636,25 @@ a:active {
 #ele-7 {
   grid-area: gnews;
   background: #e8edf7;
-  overflow: scroll;
 }
 
 .news-container {
   display: grid;
   margin-top: 15px;
+  max-height: 600px;
+  max-width: 800px;
+  overflow: scroll;
+  
 }
 
 .news-item {
   display: flex;
+  justify-content: space-between;
   background: #ffffff;
   border-radius: 13px;
   padding: 17px 24px;
+  margin-bottom: 12px;
+  max-height: 70%;
 }
 
 .news-left-text {
@@ -685,4 +697,5 @@ a:active {
 .news-thumbnail {
   width: 225px;
   height: 139px;
+  border-radius: 5px;
 }
